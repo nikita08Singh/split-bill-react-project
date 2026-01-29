@@ -94,9 +94,26 @@ function AddFriendForm({onAddNewFriend}){
 
 function BillForm(){
   return(
-    <div className="form-split-bill">
+    <form className="form-split-bill">
+      <h2>SPLIT A BILL WITH X</h2>
 
-    </div>
+      <label>💰 Bill value</label>
+      <input type="text" />
+
+      <label>🧍 Your expense</label>
+      <input type="text" />
+
+      <label>🧑‍🤝‍🧑 X's expense</label>
+      <input type="text" disabled/>
+
+      <label>🤑 Who is paying the bill?</label>
+      <select>
+          <option value="you">You</option>
+          <option value="friend">X</option>
+      </select>
+
+      <Button>Split bill</Button>
+    </form>
   )
 }
 
